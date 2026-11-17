@@ -9,6 +9,8 @@ The project combines simulated operational records with public Hamburg parking d
 [View the dashboard on Tableau Public](https://public.tableau.com/views/HamburgOperationsOverview/HamburgOperationsOverview)
 
 Explore daily rides, fleet availability, net revenue and listed operating costs. A shared date filter updates all four charts.
+<img width="1928" height="1454" alt="image" src="https://github.com/user-attachments/assets/e1319e9c-492f-4ef2-88c7-1df1b353fcc1" />
+
 
 ## The operational problem
 
