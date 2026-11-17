@@ -117,6 +117,20 @@ The shared date filter allows comparison over the same reporting period.
 
 These figures describe the simulated dataset. They do not represent actual company performance or measured business improvements.
 
+
+## Project files
+
+| File | Contents |
+|---|---|
+| [Operations planner](Hamburg_Operations_Planner.xlsx) | Fleet, repairs, staff planning, incidents and parking review |
+| [30-day performance](Hamburg_30_Day_Performance.xlsx) | Historical performance and financial assumptions |
+| [SQLite database](Hamburg_Operations.sqlite) | Operational tables and analytical views |
+| [SQL queries](Practice_Queries.sql) | Queries used to explore and check the data |
+| [Expected results](Expected_Results.json) | Reference results for validation |
+| [Data dictionary](Data_Dictionary.txt) | Database structure and field descriptions |
+| [Database instructions](README.txt) | Instructions for opening and querying the database |
+| [Parking source data](Hamburg_Parking_Source_Data.zip) | Public Hamburg geographic source files |
+
 ## How to explore
 
 1. Open the Tableau dashboard and adjust the date filter.
