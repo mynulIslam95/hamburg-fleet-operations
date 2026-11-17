@@ -1,0 +1,122 @@
+TABLES AND COLUMN TYPES
+
+incident_targets
+  priority: TEXT
+  response_hours: REAL
+  resolution_hours: REAL
+incidents
+  incident_id: TEXT
+  vehicle_id: TEXT
+  category: TEXT
+  priority: TEXT
+  reported_at: TEXT
+  first_response_at: TEXT
+  resolved_at: TEXT
+  incident_status: TEXT
+  owner_id: TEXT
+  action_notes: TEXT
+operating_costs
+  date: TEXT
+  category: TEXT
+  quantity: REAL
+  unit_cost_eur: REAL
+  amount_eur: REAL
+  quantity_unit: TEXT
+  repair_id: TEXT
+parking_checks
+  vehicle_id: TEXT
+  vehicle_status: TEXT
+  location_type: TEXT
+  latitude: REAL
+  longitude: REAL
+  zone_result: TEXT
+  matched_zone_count: INTEGER
+  zone_ids: TEXT
+  nearest_site_id: TEXT
+  nearest_site_distance_m: REAL
+  interpretation: TEXT
+parking_sites
+  site_id: TEXT
+  site_type: TEXT
+  site_name: TEXT
+  latitude: REAL
+  longitude: REAL
+  district: TEXT
+performance_reference
+  date: TEXT
+  fleet_vehicles: INTEGER
+  available_minutes: REAL
+  availability_rate: REAL
+  rides: INTEGER
+  ride_minutes: INTEGER
+  gross_revenue_eur: REAL
+  refund_eur: REAL
+  net_revenue_eur: REAL
+  operating_cost_eur: REAL
+  listed_cost_contribution_eur: REAL
+  cost_per_ride_eur: REAL
+  revenue_per_ride_eur: REAL
+  completed_repairs: INTEGER
+repairs
+  repair_id: TEXT
+  vehicle_id: TEXT
+  fault_type: TEXT
+  priority: TEXT
+  repair_status: TEXT
+  reported_at: TEXT
+  started_at: TEXT
+  completed_at: TEXT
+  estimated_minutes: INTEGER
+  parts_cost_eur: REAL
+settings
+  key: TEXT
+  value: TEXT
+  meaning: TEXT
+source_metadata
+  key: TEXT
+  value: TEXT
+staff_shifts
+  employee_id: TEXT
+  role: TEXT
+  shift_date: TEXT
+  shift_start: TEXT
+  shift_end: TEXT
+  break_start: TEXT
+  break_end: TEXT
+  attendance: TEXT
+tasks
+  task_id: TEXT
+  vehicle_id: TEXT
+  repair_id: TEXT
+  task_type: TEXT
+  priority: TEXT
+  required_role: TEXT
+  assigned_employee_id: TEXT
+  planned_start: TEXT
+  planned_end: TEXT
+  remaining_minutes: INTEGER
+  task_status: TEXT
+vehicle_days
+  date: TEXT
+  vehicle_id: TEXT
+  repair_unavailable_min: INTEGER
+  charging_unavailable_min: INTEGER
+  available_minutes: INTEGER
+  rides: INTEGER
+  ride_minutes: INTEGER
+  refund_eur: REAL
+vehicles
+  vehicle_id: TEXT
+  vehicle_type: TEXT
+  status: TEXT
+  battery_percent: INTEGER
+  latitude: REAL
+  longitude: REAL
+  last_updated: TEXT
+
+VIEWS
+fleet_status
+repair_metrics
+staff_workload
+incident_metrics
+daily_financials

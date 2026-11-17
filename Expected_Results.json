@@ -1,0 +1,1189 @@
+{
+  "01_vehicle_count": {
+    "question": "How many scooters are in the fleet?",
+    "columns": [
+      "total_scooters"
+    ],
+    "rows": [
+      [
+        200
+      ]
+    ]
+  },
+  "02_status_breakdown": {
+    "question": "How many scooters have each status?",
+    "columns": [
+      "status",
+      "scooters"
+    ],
+    "rows": [
+      [
+        "Available",
+        130
+      ],
+      [
+        "Needs Charging",
+        20
+      ],
+      [
+        "Awaiting Repair",
+        20
+      ],
+      [
+        "Charging",
+        15
+      ],
+      [
+        "Ready for Deployment",
+        10
+      ],
+      [
+        "Under Repair",
+        5
+      ]
+    ]
+  },
+  "03_overdue_repairs": {
+    "question": "Which repairs have waited more than 24 hours?",
+    "columns": [
+      "repair_id",
+      "vehicle_id",
+      "fault_type",
+      "priority",
+      "waiting_hours"
+    ],
+    "rows": [
+      [
+        "REP-013",
+        "SC-118",
+        "Brake fault",
+        "High",
+        43.0
+      ],
+      [
+        "REP-019",
+        "SC-152",
+        "Brake fault",
+        "High",
+        40.0
+      ],
+      [
+        "REP-006",
+        "SC-028",
+        "Damaged mudguard",
+        "Low",
+        39.0
+      ],
+      [
+        "REP-025",
+        "SC-199",
+        "Brake fault",
+        "High",
+        37.0
+      ],
+      [
+        "REP-018",
+        "SC-143",
+        "Damaged mudguard",
+        "Low",
+        33.0
+      ],
+      [
+        "REP-005",
+        "SC-014",
+        "Charging port fault",
+        "Medium",
+        32.0
+      ],
+      [
+        "REP-024",
+        "SC-176",
+        "Damaged mudguard",
+        "Low",
+        30.0
+      ],
+      [
+        "REP-011",
+        "SC-097",
+        "Charging port fault",
+        "Medium",
+        29.0
+      ],
+      [
+        "REP-017",
+        "SC-140",
+        "Charging port fault",
+        "Medium",
+        26.0
+      ],
+      [
+        "REP-004",
+        "SC-012",
+        "Loose handlebar",
+        "High",
+        25.0
+      ]
+    ]
+  },
+  "04_repair_vehicle_join": {
+    "question": "Join high-priority open repairs to vehicle records.",
+    "columns": [
+      "repair_id",
+      "vehicle_id",
+      "fault_type",
+      "battery_percent",
+      "status"
+    ],
+    "rows": [
+      [
+        "REP-001",
+        "SC-007",
+        "Brake fault",
+        32,
+        "Awaiting Repair"
+      ],
+      [
+        "REP-003",
+        "SC-011",
+        "Light fault",
+        9,
+        "Awaiting Repair"
+      ],
+      [
+        "REP-004",
+        "SC-012",
+        "Loose handlebar",
+        65,
+        "Awaiting Repair"
+      ],
+      [
+        "REP-007",
+        "SC-029",
+        "Brake fault",
+        90,
+        "Under Repair"
+      ],
+      [
+        "REP-009",
+        "SC-045",
+        "Light fault",
+        60,
+        "Under Repair"
+      ],
+      [
+        "REP-010",
+        "SC-084",
+        "Loose handlebar",
+        79,
+        "Awaiting Repair"
+      ],
+      [
+        "REP-013",
+        "SC-118",
+        "Brake fault",
+        24,
+        "Awaiting Repair"
+      ],
+      [
+        "REP-015",
+        "SC-134",
+        "Light fault",
+        0,
+        "Awaiting Repair"
+      ],
+      [
+        "REP-016",
+        "SC-136",
+        "Loose handlebar",
+        28,
+        "Awaiting Repair"
+      ],
+      [
+        "REP-019",
+        "SC-152",
+        "Brake fault",
+        79,
+        "Awaiting Repair"
+      ],
+      [
+        "REP-021",
+        "SC-157",
+        "Light fault",
+        58,
+        "Awaiting Repair"
+      ],
+      [
+        "REP-022",
+        "SC-171",
+        "Loose handlebar",
+        72,
+        "Awaiting Repair"
+      ],
+      [
+        "REP-025",
+        "SC-199",
+        "Brake fault",
+        68,
+        "Awaiting Repair"
+      ]
+    ]
+  },
+  "05_completed_turnaround": {
+    "question": "What is average completed-repair turnaround?",
+    "columns": [
+      "completed_repairs",
+      "avg_wait_hours",
+      "avg_turnaround_hours",
+      "parts_cost_eur"
+    ],
+    "rows": [
+      [
+        50,
+        3.0,
+        3.65,
+        967.5
+      ]
+    ]
+  },
+  "06_staff_workload": {
+    "question": "Compare remaining staff capacity with assigned minutes.",
+    "columns": [
+      "employee_id",
+      "role",
+      "attendance",
+      "available_minutes",
+      "assigned_minutes",
+      "free_minutes",
+      "utilisation_pct"
+    ],
+    "rows": [
+      [
+        "EMP-006",
+        "Field Support",
+        "Present",
+        450.0,
+        350,
+        100.0,
+        77.78
+      ],
+      [
+        "EMP-007",
+        "Field Support",
+        "Present",
+        450.0,
+        350,
+        100.0,
+        77.78
+      ],
+      [
+        "EMP-003",
+        "Mechanic",
+        "Present",
+        390.0,
+        189,
+        201.0,
+        48.46
+      ],
+      [
+        "EMP-002",
+        "Mechanic",
+        "Present",
+        390.0,
+        182,
+        208.0,
+        46.67
+      ],
+      [
+        "EMP-004",
+        "Mechanic",
+        "Present",
+        390.0,
+        182,
+        208.0,
+        46.67
+      ],
+      [
+        "EMP-005",
+        "Mechanic",
+        "Present",
+        390.0,
+        181,
+        209.0,
+        46.41
+      ],
+      [
+        "EMP-001",
+        "Mechanic",
+        "Present",
+        390.0,
+        174,
+        216.0,
+        44.62
+      ],
+      [
+        "EMP-009",
+        "Warehouse Support",
+        "Present",
+        450.0,
+        40,
+        410.0,
+        8.89
+      ],
+      [
+        "EMP-010",
+        "Warehouse Support",
+        "Present",
+        450.0,
+        35,
+        415.0,
+        7.78
+      ],
+      [
+        "EMP-008",
+        "Field Support",
+        "Absent",
+        0.0,
+        0,
+        0.0,
+        null
+      ]
+    ]
+  },
+  "07_assignment_checks": {
+    "question": "Find absent staff or role mismatches in assignments.",
+    "columns": [
+      "task_id",
+      "assigned_employee_id",
+      "required_role",
+      "role",
+      "attendance"
+    ],
+    "rows": []
+  },
+  "08_task_overlaps": {
+    "question": "Find overlapping assignments without counting each pair twice.",
+    "columns": [
+      "task_a",
+      "task_b",
+      "assigned_employee_id"
+    ],
+    "rows": []
+  },
+  "09_incident_deadlines": {
+    "question": "How many unresolved response/resolution deadlines are overdue?",
+    "columns": [
+      "responses_overdue",
+      "resolutions_overdue"
+    ],
+    "rows": [
+      [
+        6,
+        6
+      ]
+    ]
+  },
+  "10_parking_review": {
+    "question": "Which field locations need a no-parking review?",
+    "columns": [
+      "vehicle_id",
+      "vehicle_status",
+      "latitude",
+      "longitude",
+      "nearest_site_distance_m"
+    ],
+    "rows": [
+      [
+        "SC-006",
+        "Needs Charging",
+        53.550777,
+        9.99699,
+        242.6
+      ],
+      [
+        "SC-010",
+        "Available",
+        53.551895,
+        9.934966,
+        70.5
+      ],
+      [
+        "SC-015",
+        "Available",
+        53.552938,
+        9.995053,
+        112.2
+      ],
+      [
+        "SC-023",
+        "Available",
+        53.550604,
+        9.937186,
+        106.1
+      ],
+      [
+        "SC-036",
+        "Available",
+        53.572941,
+        9.962023,
+        375.8
+      ],
+      [
+        "SC-038",
+        "Needs Charging",
+        53.552945,
+        9.930168,
+        268.7
+      ],
+      [
+        "SC-042",
+        "Available",
+        53.550267,
+        9.932262,
+        222.1
+      ],
+      [
+        "SC-043",
+        "Available",
+        53.554086,
+        9.990217,
+        180.5
+      ],
+      [
+        "SC-044",
+        "Available",
+        53.554524,
+        10.063793,
+        157.5
+      ],
+      [
+        "SC-048",
+        "Available",
+        53.552105,
+        9.987708,
+        50.3
+      ],
+      [
+        "SC-054",
+        "Available",
+        53.55206,
+        9.940025,
+        173.4
+      ],
+      [
+        "SC-057",
+        "Available",
+        53.5787,
+        9.958068,
+        499.2
+      ],
+      [
+        "SC-060",
+        "Available",
+        53.551711,
+        9.935875,
+        55.5
+      ],
+      [
+        "SC-063",
+        "Available",
+        53.557609,
+        10.057108,
+        248.8
+      ],
+      [
+        "SC-065",
+        "Available",
+        53.55485,
+        9.933286,
+        256.7
+      ],
+      [
+        "SC-069",
+        "Needs Charging",
+        53.557925,
+        10.056361,
+        264.2
+      ],
+      [
+        "SC-072",
+        "Needs Charging",
+        53.558185,
+        10.061202,
+        478.9
+      ],
+      [
+        "SC-075",
+        "Available",
+        53.557418,
+        10.059581,
+        342.1
+      ],
+      [
+        "SC-079",
+        "Available",
+        53.552442,
+        10.064276,
+        233.5
+      ],
+      [
+        "SC-082",
+        "Available",
+        53.548278,
+        9.934636,
+        382.3
+      ],
+      [
+        "SC-088",
+        "Available",
+        53.553621,
+        9.933834,
+        179.6
+      ],
+      [
+        "SC-090",
+        "Available",
+        53.551022,
+        9.993645,
+        93.0
+      ],
+      [
+        "SC-092",
+        "Available",
+        53.551723,
+        9.932535,
+        96.5
+      ],
+      [
+        "SC-095",
+        "Available",
+        53.553458,
+        9.991648,
+        119.6
+      ],
+      [
+        "SC-112",
+        "Available",
+        53.57857,
+        9.958878,
+        538.1
+      ],
+      [
+        "SC-114",
+        "Available",
+        53.554694,
+        9.995445,
+        291.7
+      ],
+      [
+        "SC-121",
+        "Available",
+        53.553567,
+        9.930445,
+        287.6
+      ],
+      [
+        "SC-123",
+        "Available",
+        53.554483,
+        9.993455,
+        213.2
+      ],
+      [
+        "SC-127",
+        "Available",
+        53.551998,
+        9.929652,
+        281.7
+      ],
+      [
+        "SC-128",
+        "Available",
+        53.542623,
+        10.006416,
+        543.9
+      ],
+      [
+        "SC-139",
+        "Available",
+        53.553946,
+        9.99936,
+        365.5
+      ],
+      [
+        "SC-146",
+        "Needs Charging",
+        53.550518,
+        9.989025,
+        194.2
+      ],
+      [
+        "SC-149",
+        "Available",
+        53.552972,
+        9.931357,
+        200.3
+      ],
+      [
+        "SC-150",
+        "Available",
+        53.552401,
+        9.940303,
+        182.9
+      ],
+      [
+        "SC-151",
+        "Available",
+        53.541357,
+        10.007446,
+        642.2
+      ],
+      [
+        "SC-160",
+        "Available",
+        53.555124,
+        10.060398,
+        336.4
+      ],
+      [
+        "SC-162",
+        "Available",
+        53.55893,
+        10.0557,
+        368.4
+      ],
+      [
+        "SC-168",
+        "Available",
+        53.552454,
+        9.995766,
+        130.4
+      ],
+      [
+        "SC-169",
+        "Available",
+        53.542034,
+        10.004899,
+        500.4
+      ],
+      [
+        "SC-173",
+        "Available",
+        53.548448,
+        9.933652,
+        392.9
+      ],
+      [
+        "SC-175",
+        "Available",
+        53.555391,
+        9.929509,
+        327.9
+      ],
+      [
+        "SC-178",
+        "Available",
+        53.555397,
+        9.932256,
+        211.7
+      ],
+      [
+        "SC-179",
+        "Available",
+        53.552437,
+        9.988571,
+        105.9
+      ],
+      [
+        "SC-180",
+        "Needs Charging",
+        53.548638,
+        9.933071,
+        378.7
+      ],
+      [
+        "SC-194",
+        "Available",
+        53.557835,
+        10.055501,
+        246.1
+      ]
+    ]
+  },
+  "11_daily_trends": {
+    "question": "Review daily simulated performance.",
+    "columns": [
+      "date",
+      "rides",
+      "availability_pct",
+      "net_revenue_eur",
+      "listed_costs_eur",
+      "cost_per_ride_eur"
+    ],
+    "rows": [
+      [
+        "2026-10-18",
+        953,
+        91.89,
+        4089.2,
+        1736.11,
+        1.82
+      ],
+      [
+        "2026-10-19",
+        778,
+        91.37,
+        3358.92,
+        1930.73,
+        2.48
+      ],
+      [
+        "2026-10-20",
+        779,
+        91.61,
+        3416.22,
+        1912.8,
+        2.46
+      ],
+      [
+        "2026-10-21",
+        796,
+        91.3,
+        3444.69,
+        1943.02,
+        2.44
+      ],
+      [
+        "2026-10-22",
+        801,
+        91.38,
+        3443.97,
+        1953.24,
+        2.44
+      ],
+      [
+        "2026-10-23",
+        773,
+        91.39,
+        3328.22,
+        1741.36,
+        2.25
+      ],
+      [
+        "2026-10-24",
+        977,
+        91.29,
+        4195.9,
+        1947.68,
+        1.99
+      ],
+      [
+        "2026-10-25",
+        982,
+        91.63,
+        4229.27,
+        1957.58,
+        1.99
+      ],
+      [
+        "2026-10-26",
+        761,
+        91.61,
+        3320.51,
+        1917.77,
+        2.52
+      ],
+      [
+        "2026-10-27",
+        815,
+        91.7,
+        3457.69,
+        1951.36,
+        2.39
+      ],
+      [
+        "2026-10-28",
+        780,
+        91.38,
+        3366.61,
+        1766.56,
+        2.26
+      ],
+      [
+        "2026-10-29",
+        799,
+        91.6,
+        3398.95,
+        1908.14,
+        2.39
+      ],
+      [
+        "2026-10-30",
+        854,
+        91.26,
+        3603.57,
+        1942.09,
+        2.27
+      ],
+      [
+        "2026-10-31",
+        913,
+        91.49,
+        3862.72,
+        1957.57,
+        2.14
+      ],
+      [
+        "2026-11-01",
+        983,
+        91.43,
+        4238.92,
+        1946.89,
+        1.98
+      ],
+      [
+        "2026-11-02",
+        773,
+        91.38,
+        3307.77,
+        1762.86,
+        2.28
+      ],
+      [
+        "2026-11-03",
+        780,
+        91.64,
+        3333.98,
+        1930.7,
+        2.48
+      ],
+      [
+        "2026-11-04",
+        788,
+        91.68,
+        3401.25,
+        1913.64,
+        2.43
+      ],
+      [
+        "2026-11-05",
+        797,
+        91.29,
+        3420.03,
+        1943.14,
+        2.44
+      ],
+      [
+        "2026-11-06",
+        823,
+        91.57,
+        3499.15,
+        1955.27,
+        2.38
+      ],
+      [
+        "2026-11-07",
+        956,
+        91.49,
+        4061.71,
+        1759.57,
+        1.84
+      ],
+      [
+        "2026-11-08",
+        974,
+        91.67,
+        4152.98,
+        1947.07,
+        2.0
+      ],
+      [
+        "2026-11-09",
+        784,
+        91.33,
+        3348.72,
+        1938.04,
+        2.47
+      ],
+      [
+        "2026-11-10",
+        850,
+        91.5,
+        3637.16,
+        1926.77,
+        2.27
+      ],
+      [
+        "2026-11-11",
+        819,
+        91.28,
+        3539.62,
+        1952.11,
+        2.38
+      ],
+      [
+        "2026-11-12",
+        838,
+        91.47,
+        3536.87,
+        1772.29,
+        2.11
+      ],
+      [
+        "2026-11-13",
+        801,
+        91.5,
+        3404.32,
+        1885.49,
+        2.35
+      ],
+      [
+        "2026-11-14",
+        1007,
+        91.72,
+        4337.27,
+        1912.66,
+        1.9
+      ],
+      [
+        "2026-11-15",
+        927,
+        90.46,
+        3995.93,
+        1911.33,
+        2.06
+      ],
+      [
+        "2026-11-16",
+        748,
+        84.14,
+        3218.76,
+        1900.04,
+        2.54
+      ]
+    ]
+  },
+  "12_financial_totals": {
+    "question": "Reconcile period revenue, costs and contribution.",
+    "columns": [
+      "rides",
+      "net_revenue_eur",
+      "listed_costs_eur",
+      "listed_cost_contribution_eur",
+      "cost_per_ride_eur"
+    ],
+    "rows": [
+      [
+        25409,
+        108950.88,
+        56923.87,
+        52027.01,
+        2.24
+      ]
+    ]
+  },
+  "13_cost_categories": {
+    "question": "Which listed costs are largest?",
+    "columns": [
+      "category",
+      "total_eur"
+    ],
+    "rows": [
+      [
+        "Mechanic labour",
+        27000.0
+      ],
+      [
+        "Field labour",
+        13230.0
+      ],
+      [
+        "Warehouse labour",
+        8550.0
+      ],
+      [
+        "Ride processing",
+        2540.9
+      ],
+      [
+        "Warehouse overhead",
+        2400.0
+      ],
+      [
+        "Field vehicle usage",
+        2025.0
+      ],
+      [
+        "Repair parts",
+        967.5
+      ],
+      [
+        "Charging electricity",
+        210.47
+      ]
+    ]
+  },
+  "14_weekly_trends": {
+    "question": "Compare Monday-based weeks; first and last weeks are partial.",
+    "columns": [
+      "week_start",
+      "days_in_period",
+      "rides",
+      "net_revenue_eur",
+      "listed_costs_eur"
+    ],
+    "rows": [
+      [
+        "2026-10-12",
+        1,
+        953,
+        4089.2,
+        1736.11
+      ],
+      [
+        "2026-10-19",
+        7,
+        5886,
+        25417.19,
+        13386.41
+      ],
+      [
+        "2026-10-26",
+        7,
+        5905,
+        25248.97,
+        13390.37
+      ],
+      [
+        "2026-11-02",
+        7,
+        5891,
+        25176.87,
+        13212.25
+      ],
+      [
+        "2026-11-09",
+        7,
+        6026,
+        25799.89,
+        13298.68
+      ],
+      [
+        "2026-11-16",
+        1,
+        748,
+        3218.76,
+        1900.04
+      ]
+    ]
+  },
+  "15_rank_vehicles": {
+    "question": "Rank vehicles by rides over the period.",
+    "columns": [
+      "vehicle_id",
+      "rides",
+      "ride_rank"
+    ],
+    "rows": [
+      [
+        "SC-024",
+        152,
+        1
+      ],
+      [
+        "SC-083",
+        152,
+        1
+      ],
+      [
+        "SC-108",
+        151,
+        3
+      ],
+      [
+        "SC-146",
+        149,
+        4
+      ],
+      [
+        "SC-174",
+        149,
+        4
+      ],
+      [
+        "SC-184",
+        148,
+        6
+      ],
+      [
+        "SC-060",
+        146,
+        7
+      ],
+      [
+        "SC-110",
+        146,
+        7
+      ],
+      [
+        "SC-085",
+        145,
+        9
+      ],
+      [
+        "SC-156",
+        145,
+        9
+      ],
+      [
+        "SC-071",
+        143,
+        11
+      ],
+      [
+        "SC-021",
+        141,
+        12
+      ],
+      [
+        "SC-058",
+        141,
+        12
+      ],
+      [
+        "SC-036",
+        139,
+        14
+      ],
+      [
+        "SC-088",
+        139,
+        14
+      ],
+      [
+        "SC-117",
+        139,
+        14
+      ],
+      [
+        "SC-147",
+        139,
+        14
+      ],
+      [
+        "SC-166",
+        139,
+        14
+      ],
+      [
+        "SC-013",
+        138,
+        19
+      ],
+      [
+        "SC-080",
+        138,
+        19
+      ]
+    ]
+  }
+}
